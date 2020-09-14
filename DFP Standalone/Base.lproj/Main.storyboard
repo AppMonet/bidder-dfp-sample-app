@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DFP_Standalone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Od-Ve-O04">
+                                <rect key="frame" x="163.5" y="76" width="87" height="30"/>
+                                <state key="normal" title="Load Banner"/>
+                                <connections>
+                                    <action selector="loadAd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WO6-AY-tTW"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="odD-e9-UNG" customClass="DFPBannerView">
+                                <rect key="frame" x="57" y="591" width="300" height="250"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxI-cw-CGM">
+                                <rect key="frame" x="154" y="138" width="106" height="30"/>
+                                <state key="normal" title="Load Interstitial"/>
+                                <connections>
+                                    <action selector="loadInterstitial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2VG-Bw-eZY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="odD-e9-UNG" secondAttribute="bottom" constant="32" id="AGj-sJ-XlT"/>
+                            <constraint firstItem="odD-e9-UNG" firstAttribute="centerX" secondItem="9Od-Ve-O04" secondAttribute="centerX" id="Z8j-t6-hbl"/>
+                            <constraint firstItem="GxI-cw-CGM" firstAttribute="top" secondItem="9Od-Ve-O04" secondAttribute="bottom" constant="32" id="sf0-mP-jMR"/>
+                            <constraint firstItem="GxI-cw-CGM" firstAttribute="centerX" secondItem="odD-e9-UNG" secondAttribute="centerX" id="wAK-dj-2Ik"/>
+                            <constraint firstItem="9Od-Ve-O04" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="wV9-7E-ztB"/>
+                            <constraint firstItem="9Od-Ve-O04" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wY8-X1-qgv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="dfpAdView" destination="odD-e9-UNG" id="JkC-HP-eO9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
